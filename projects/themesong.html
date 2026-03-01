@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Using AI to Generate Music from Images - Florentin von Frankenberg</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GH5WZ3FJB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0GH5WZ3FJB');
+  </script>
+
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background-color: white;
+      border-radius: 8px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
+      color: #0077b5;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      padding: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #0077b5;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      font-size: 1.5em;
+      color: #0077b5;
+      margin-top: 40px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .demo-video {
+      display: block;
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-top: 12px;
+    }
+
+    .live-link-box {
+      background-color: #f0f5f9;
+      border-left: 4px solid #0077b5;
+      border-radius: 4px;
+      padding: 14px 18px;
+      margin: 28px 0;
+      font-size: 1.05em;
+    }
+
+    .live-link-box a {
+      color: #0077b5;
+      font-weight: bold;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 40px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Florentin von Frankenberg</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../photos.html">Photos</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Using AI to Generate Music from Images</h1>
+    <p class="text-muted">What would your favourite photo <em>sound</em> like?</p>
+
+    <p>ThemeSong answers a simple question: given an image — a pet, a memory, a place, a person — what music would it be? Upload a photo, and within a minute you get back a full song generated to match it.</p>
+
+    <p>Under the hood, OpenAI interprets the image and crafts a detailed prompt for Suno, which then generates the track. The whole thing runs on a Raspberry Pi in my living room, exposed via a Cloudflare tunnel, with a Python backend handling image ingestion, user accounts, and API orchestration.</p>
+
+    <div class="live-link-box">
+      Try it: <a href="https://themesong.florentin.ca" target="_blank">themesong.florentin.ca</a> — this is a rough demo running on hobby hardware. Feedback welcome!
+    </div>
+
+    <hr />
+
+    <h2>Midnight on Absolute Avenue</h2>
+    <video class="demo-video" controls>
+      <source src="../photos/themesong/Midnight on Absolute Avenue.mp4" type="video/mp4">
+    </video>
+
+    <h2>Ribbon in Red</h2>
+    <video class="demo-video" controls>
+      <source src="../photos/themesong/Ribbon in Red.mp4" type="video/mp4">
+    </video>
+
+    <h2>Frozen Horizons</h2>
+    <video class="demo-video" controls>
+      <source src="../photos/themesong/Frozen Horizons.mp4" type="video/mp4">
+    </video>
+
+    <p class="mt-4"><a href="../projects.html" class="btn btn-primary">← Back to Projects</a></p>
+  </div>
+
+</body>
+</html>
